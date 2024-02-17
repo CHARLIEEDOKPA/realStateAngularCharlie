@@ -1,0 +1,21 @@
+#weatherContainer {
+  margin-top: 80px;
+  padding: 50px;
+}
+
+table {
+  margin-top: 140px;
+  font-size: 55px;
+  font-weight: lighter;
+  padding: 26px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+td {
+    padding: 20px;
+}
+
+img {
+    width: 340px;
+}

@@ -1,0 +1,16 @@
+
+<div class="p-10">
+    <input
+      type="text"
+      name=""
+      id=""
+      class="border-black border-2"
+      placeholder="filter by city"
+      #text
+    />
+    <button (click)="filter(text.value)"  class="bg-purple-600 text-white" >Filter</button>
+  </div>
+  <div id="houses">
+    <app-housing-location *ngFor="let house of filteredHousingLocationList | async" [house]="house"></app-housing-location>
+  </div>
+

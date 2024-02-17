@@ -1,0 +1,11 @@
+<div *ngIf="weather$ | async as weather" id="weatherContainer">
+    <h1 class="text-center font-bold text-6xl">The weather of {{weather.location.name}}</h1>
+    <table>
+        <tr>
+            <td><img src="{{weather.current.condition.icon}}" alt=""></td>
+            <td>{{weather.current.condition.text}}</td>
+            <td>{{weather.current.temp_c}} Cº</td>
+            <td>{{weather.location.localtime}}</td>
+        </tr>
+    </table>
+</div>

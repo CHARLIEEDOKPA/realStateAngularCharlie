@@ -1,0 +1,58 @@
+#content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+img {
+  height: 700px;
+}
+
+.info {
+  padding: 45px;
+}
+
+.info h2 {
+  margin-bottom: 10px;
+}
+
+input {
+  outline: none;
+}
+
+#mapContainer {
+  padding: 20px;
+}
+
+#map {
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+form {
+  padding: 20px;
+}
+
+form > * {
+  display: block;
+}
+
+form > label {
+  padding-top: 10px;
+}
+
+#submit {
+  padding: 20px;
+}
+
+input[type="text"] {
+  width: 250px;
+}
+
+input[type="text"].ng-invalid  {
+
+  border-bottom: red 5px solid;
+}

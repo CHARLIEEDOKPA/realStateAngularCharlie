@@ -1,0 +1,12 @@
+
+  <div class="bg-purple-50 " id="house">
+    <div class="image">
+      <img src="{{ house.photo }}" alt="" />
+    </div>
+    <h2 class="text-3 font-bold text-purple-600">{{ house.name }}</h2>
+    <h3 class="text-3 font-bold">{{ house.city }}</h3>
+    <div id="button" class="p-3 ">
+      <button [routerLink]="['/details', house.id]" class="bg-purple-600 p-2 rounded-lg hover:text-white">{{'Learn More'}}</button>
+    </div>
+    
+  </div>

@@ -1,0 +1,45 @@
+
+<div  *ngIf="house$ | async as house" id="details">
+  <div id="content">
+  <div id="info">
+    <div class="title">
+        <h1 class="text-6xl text-center p-2">{{ house.name }}</h1>
+    </div>
+    <div class="info">
+        <h2 class="text-4xl">City: {{ house.city }}</h2>
+        <h2 class="text-4xl">Units: {{house.availableUnits}}</h2>
+        <h2 class="text-4xl">Wifi available: {{house.wifi}}</h2>
+        <h2 class="text-4xl">Laundry available: {{house.laundry}}</h2>
+
+    </div>
+    <form [formGroup]="applyForm" (ngSubmit)="submitApplication()">
+      <label for="first-name" class="text-2xl">First Name: </label>
+      <input [class.invalid]="isInvalid('firstName')" class="border-b-purple-600 border-b-4 border-slod invalid:border-b-red-600" type="text" formControlName="firstName">
+      <label for="first-name" class="text-2xl">Last email: </label>
+      <input  class="border-b-purple-600 border-b-4 border-slod" type="text" formControlName="lastName">
+      <label for="first-name" class="text-2xl">Email: </label>
+      <input  class="border-b-purple-600 border-b-4 border-slod" type="text" formControlName="email">
+      <div id="submit">
+        <input type="submit" value="Send" class="bg-purple-600 p-2 rounded-lg hover:text-white cursor-pointer">
+      </div>
+    </form>
+  </div>
+  <img width="800" src="{{ house.photo }}" alt="" />
+</div>
+<div id="mapContainer">
+  <h1 class="text-6xl text-center p-2">MAP</h1>
+  <div id="map">
+    <app-map [coordinates]="house.coordinates"></app-map>
+  </div>
+  <div id="weather">
+    <app-weather [city]="house.city"></app-weather>
+  </div>
+</div>
+ 
+</div>
+
+
+
+
+
+
